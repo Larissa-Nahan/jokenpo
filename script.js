@@ -146,11 +146,14 @@ $buttonReset.addEventListener("click", function () {
 });
 
 $buttonStart.addEventListener("click", function () {
-  if (!gameStart) {
-    gameStart = true;
-    $buttonStart.classList.add("start");
-  } else {
-    gameStart = false;
-    $buttonStart.classList.remove("start");
-  }
+  gameStart = !gameStart;
+  $buttonStart.classList.toggle("start");
+
+  // if (!gameStart) {
+  //   gameStart = true;
+  //   $buttonStart.classList.add("start");
+  // } else {
+  //   gameStart = false;
+  //   $buttonStart.classList.remove("start");
+  // }
 });
