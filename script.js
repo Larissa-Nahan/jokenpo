@@ -71,14 +71,12 @@ function resetScoresVariables() {
 function printScoreBoard() {
   if (scorePlayer1 < 10) {
     $scorePlayer1.innerHTML = "0" + scorePlayer1;
+  } else {
+    $scorePlayer1.innerHTML = scorePlayer1;
   }
   if (scorePlayer2 < 10) {
     $scorePlayer2.innerHTML = "0" + scorePlayer2;
-  }
-  if (scorePlayer1 >= 10) {
-    $scorePlayer1.innerHTML = scorePlayer1;
-  }
-  if (scorePlayer2 >= 10) {
+  } else {
     $scorePlayer2.innerHTML = scorePlayer2;
   }
 }
