@@ -146,14 +146,16 @@ $buttonReset.addEventListener("click", function () {
 });
 
 $buttonStart.addEventListener("click", function () {
-  gameStart = !gameStart;
-  $buttonStart.classList.toggle("start");
+  // gameStart = !gameStart;
+  // $buttonStart.classList.toggle("start");
 
-  // if (!gameStart) {
-  //   gameStart = true;
-  //   $buttonStart.classList.add("start");
-  // } else {
-  //   gameStart = false;
-  //   $buttonStart.classList.remove("start");
-  // }
+  if (!gameStart) {
+    gameStart = true;
+    $buttonStart.classList.add("start");
+    $buttonStart.innerHTML = "Iniciado"
+  } else {
+    gameStart = false;
+    $buttonStart.classList.remove("start");
+    $buttonStart.innerHTML = "Pausado"
+  }
 });
